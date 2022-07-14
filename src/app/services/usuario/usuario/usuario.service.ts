@@ -31,8 +31,4 @@ export class UsuarioService {
   public deleteUsuario(id: number): Observable<IUsuario> {
     return this.http.delete<IUsuario>(`${this.url}/usuario/${id}`);
   }
-
-  public searchUsuario(termino: string): Observable<IUsuario[]> {
-    return this.http.get<IUsuario[]>(`${this.url}/usuario/${termino}`);
-  }
 }
