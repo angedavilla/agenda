@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <h1 class="text-center fw-bold py-5">
+        Agenda de contactos
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div class="text-start text-md-center">
+            <a class="btn btn-primary my-3 text-end" routerLink="agregar" 
+                >Agregar</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <div class="text-center my-3 col-12">
+            <input class="form-control mt-3" type="text" name="search" [(ngModel)]="usuarioFilter" autocomplete="off"
+                placeholder="Buscar">
+        </div>
+    </div>
+</div>
+
+
+<div class="table-responsive">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Fecha de nacimiento</th>
+            <th>Direccion</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody class="">
+        <tr *ngFor="let usuario of usuarios |  filter: usuarioFilter;  let num = index">
+            <td>
+                {{ usuario.nombre }}
+            </td>
+            <td>
+                {{ usuario.telefono }}
+            </td>
+            <td>
+                {{ usuario.fecha_nacimiento }}
+            </td>
+            <td>
+                {{ usuario.direccion }}
+            </td>
+            <td>
+                {{ usuario.email }}
+            </td>
+            <td>
+                <div>
+                    <button class="btn btn-primary my-1" [routerLink]="['/editar', usuario.id]">Editar</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger my-1" (click)="deleteUsuario(usuario.id!)">Eliminar</button>
+                </div>                                
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

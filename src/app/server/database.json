@@ -1,0 +1,20 @@
+{
+  "usuario": [
+    {
+      "nombre": "Angel",
+      "telefono": 3124944758,
+      "fecha_nacimiento": "2022-07-03",
+      "direccion": "calle 52 c n 31- 21",
+      "email": "prueba.prueba@gmail.com",
+      "id": 1
+    },
+    {
+      "nombre": "David",
+      "telefono": 3124944758,
+      "fecha_nacimiento": "2022-04-12",
+      "direccion": "calle 52 c n 31- 22",
+      "email": "prueba@gmail.com",
+      "id": 2
+    }
+  ]
+}
